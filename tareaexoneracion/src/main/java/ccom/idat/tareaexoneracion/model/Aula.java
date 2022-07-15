@@ -22,5 +22,6 @@ public class Aula {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idAula;
 	private String nombreAula;
+	private Boolean poseeOrdenadores;
 
 }

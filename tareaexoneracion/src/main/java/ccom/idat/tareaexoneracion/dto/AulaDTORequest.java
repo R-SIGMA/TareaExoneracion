@@ -12,5 +12,6 @@ public class AulaDTORequest {
 	
 	private Integer idAula;
 	private String nombreAula;
-
+	private Boolean poseeOrdenadores;
+	
 }
