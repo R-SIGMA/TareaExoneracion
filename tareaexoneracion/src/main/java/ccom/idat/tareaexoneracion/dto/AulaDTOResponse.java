@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class AulaDTOResponse {
 	private Integer idAula;
 	private String nombreAula;
-
+	private Boolean poseeOrdenadores;
 }
