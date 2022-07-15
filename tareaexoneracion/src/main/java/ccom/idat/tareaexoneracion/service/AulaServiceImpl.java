@@ -20,13 +20,13 @@ public class AulaServiceImpl implements AulaService {
 	
 	@Override
 	public List<AulaDTOResponse> listar() {
-		// TODO Auto-generated method stub
 		List<AulaDTOResponse> lista = new ArrayList<AulaDTOResponse>();
 		
 		for(Aula aula: repository.findAll()) {
 			AulaDTOResponse au = new AulaDTOResponse();
 			au.setIdAula(aula.getIdAula());
 			au.setNombreAula(aula.getNombreAula());
+			au.setPoseeOrdenadores(aula.getPoseeOrdenadores());
 			
 			lista.add(au);
 		}
@@ -41,6 +41,7 @@ public class AulaServiceImpl implements AulaService {
 		
 		au.setIdAula(aula.getIdAula());
 		au.setNombreAula(aula.getNombreAula());
+		au.setPoseeOrdenadores(aula.getPoseeOrdenadores());
 		
 		return au;
 	}
@@ -51,9 +52,9 @@ public class AulaServiceImpl implements AulaService {
 		
 		au.setIdAula(aula.getIdAula());
 		au.setNombreAula(aula.getNombreAula());
+		au.setPoseeOrdenadores(aula.getPoseeOrdenadores());
 		
 		repository.save(au);
-		
 		
 	}
 
@@ -63,6 +64,7 @@ public class AulaServiceImpl implements AulaService {
 		
 		au.setIdAula(aula.getIdAula());
 		au.setNombreAula(aula.getNombreAula());
+		au.setPoseeOrdenadores(aula.getPoseeOrdenadores());
 		
 		repository.saveAndFlush(au);
 	}
@@ -73,6 +75,4 @@ public class AulaServiceImpl implements AulaService {
 		
 	}
 	
-	
-
 }
