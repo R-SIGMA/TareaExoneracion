@@ -25,7 +25,7 @@ public class AlumnoController {
 	@Autowired
 	private AlumnoService serv;
 	
-	@GetMapping("/listar")
+	@GetMapping("/listar2")
 	public @ResponseBody List<AlumnoDTOResponse> listar(){
 		return serv.listar();
 	}
@@ -35,7 +35,7 @@ public class AlumnoController {
 		return serv.obtener(id);
 	}
 	
-	@PostMapping("/guardar")
+	@PostMapping("/guardar2")
 	public @ResponseBody void guardar(@RequestBody AlumnoDTORequest alumno) {
 		serv.guardar(alumno);
 	}
